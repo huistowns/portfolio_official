@@ -94,7 +94,7 @@ li {
 }
 
 .about-me{
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
     background-color: black;
     padding: 20px 0;
     font-family: 'PT Sans Narrow', sans-serif;
@@ -102,8 +102,9 @@ li {
 }
 
 .about-me__wrapper {
-    position: relative;
-    top: 10%;
+    /* position: relative;
+    top: 100px; */
+    margin-top: 100px;
 }
 
 
@@ -122,16 +123,67 @@ li {
 }
 
 .user-information button {
+    text-align: center;
+    vertical-align: auto;
     border: none;
     font-family: 'PT Sans Narrow', sans-serif;
+    transition: 0.3s;
     cursor: pointer;
-    padding: 15px 25px;
+    padding: 10px 20px;
     background-color: yellow;
     margin-left: 20px;
     margin-top: 30px;
     font-size: 30px;
     border-radius: 3px;
 }
+
+
+.my-skills {
+    font-family: 'PT Sans Narrow', sans-serif;
+    height: 450px;
+}
+
+.my-skills h2 {
+    margin-top: 10px;
+    letter-spacing: 2px;
+    margin-left: 80px;
+    font-size: 35px;
+    width: max-content;
+}
+
+.my-skills h2 img {
+    width: 45px;
+    position: relative;
+    top: 8px;
+    left: 10px;
+}
+
+.languages-field {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.languages-field .cart {
+    text-align: center;
+    background-color: black;
+    padding: 20px 20px;
+    border-radius: 4px;
+    width: 25%;
+    margin: 20px;
+}
+
+.languages-field img {
+    opacity: 0.4;
+    transition: 0.3s ease-out;
+}
+
+.languages-field img:hover {
+    opacity: 1;
+}
+
+
 
 /* Модальное окно */
 
