@@ -9,10 +9,14 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/animate.css">
 </head>
 <body>
     <div class="main-wrapper">
+        <div class="burger-icon">
+            <img src="img/iconfinder_menu-alt_134216.svg">
+        </div>
         <header class="header">
             <div class="logo">
                 <a href="#">Omirzakov</a>
@@ -21,7 +25,7 @@
             <div class="nav-link">
                 <nav>
                     <li><a href="#modal-user" rel="modal:open">Обо мне</a></li>
-                    <li><a href="#">Мои работы</a></li>
+                    <li><a href=".my-jobs">Мои работы</a></li>
                     <li><a href=".my-skills">Навыки</a></li>
                     <li><a href="#">Контакты</a></li>
                 </nav>
@@ -35,30 +39,63 @@
         </header>
     </div>
 
+    <div class="burger-menu">
+        <div class="logo">
+            <a href="#">Omirzakov</a>
+            <img src="img/logoIcon.svg" alt="logo">
+        </div>
+         <nav>
+            <li><a href="#modal-user" rel="modal:open">Обо мне</a></li>
+            <li><a href=".my-jobs">Мои работы</a></li>
+            <li><a href=".my-skills">Навыки</a></li>
+            <li><a href="#">Контакты</a></li>
+        </nav>
+        <div class="login-field">
+            <nav>
+                <li><a href="#">Регистрация</a></li>
+                <li><a href="#">Логин</a></li>
+            </nav>
+        </div>
+    </div>
+
         <section class="about-me">
             <div class="about-me__wrapper">
                 <div class="icon-user">
                     <img src="img/my-photo.jpg" alt="my-photo" width="200px" class="animated zoomIn">
                 </div>
                 <div class="user-information animated fadeIn">
-                    <h2>Привет, Меня зовут Мадияр <br> Я веб-разработчик</h2>
+                    <h2 id="user-header"></h2>
                     <p>Разрабатываю качественные веб-сайты, выполняю верстку и программирование сайтов. 
                          Любой начатый проект довожу до конца, постоянно совершенствую свой профессиональный уровень.
                     </p>
-                    <button><a href="#modal-user" rel="modal:open">Подробнее</a></button>
+                    <div class="button-field">
+                        <button><a href="#modal-user" rel="modal:open">Подробнее</a></button>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="my-skills">
-            <h2>Мои профессиональные навыки <img src="img/coat-of-arms.png" alt=""></h2>
+            <p id="simpleUsage"></p>
             <div class="languages-field">
-                <div class="cart" title="css3"><img src="img/languages/css.png" alt="css"></div>
-                <div class="cart" title="html5"><img src="img/languages/html5.png" alt="html5"></div>
-                <div class="cart" title="javascript"><img src="img/languages/java.png" alt="javascript"></div>
-                <div class="cart" title="bootstrap"><img src="img/languages/bootstrap.png" alt="bootstrap"></div>
-                <div class="cart" title="psql"><img src="img/languages//sql.png" alt="sql"></div>
-                <div class="cart" title="php"><img src="img/languages/php.png" alt="php"></div>
+                <div class="cart" title="css3">
+                    <img src="img/dev-icons/icons8-css-100.png">
+                </div>
+                <div class="cart" title="html5">
+                    <img src="img/dev-icons/icons8-html-100.png">
+                </div>
+                <div class="cart" title="javascript">
+                    <img src="img/dev-icons/icons8-javascript-100.png">
+                </div>
+                <div class="cart" title="bootstrap">
+                    <img src="img/dev-icons/bootstrap-icon.png" width="120px">
+                </div>
+                <div class="cart" title="psql">
+                    <img src="img/dev-icons/icons8-sql-100.png">
+                </div>
+                <div class="cart" title="php">
+                    <img src="img/dev-icons/icons8-php-100.png">
+                </div>
 
             </div>
         </section>
@@ -76,12 +113,72 @@
                   </nav>
           </div>
 
+          <div class="my-jobs">
+            <h2>Мои работы</h2>
+            <p>Выполнено работ: <div class="number" data-max="12">0</div></p>
+              <div class="cart-field">
+                  <div class="cart">
+                    <div class="cart-img">
+                        <img src="img/website-photos/kino-alm/1.jpg">
+                    </div>
+                  </div>
+                  <div class="cart">
+                    <div class="cart-img">
+                        <img src="img/website-photos/mag-magazine/2.jpg">
+                    </div>
+                  </div>
+                  <div class="cart">
+                    <div class="cart-img">
+                        <img src="img/website-photos/uber-eats/1.jpg">
+                    </div>
+                  </div>
+                  <div class="cart">
+                    <div class="cart-img">
+                        <img src="img/website-photos/company-website/1.jpg">
+                    </div>
+                  </div>
+                  <div class="cart">
+                    <div class="cart-img">
+                        <img src="img/website-photos/website-portfolio/1.jpg">
+                    </div>
+                  </div>   
+                  <div class="cart">
+                    <div class="cart-img">
+                        <img src="img/website-photos/star-wars.jpg">
+                    </div>
+                  </div>                 
+              </div>
+              </div>
+
+              <div class="contact-form">
+                <div class="contact-input">
+                    <form action="main.php" method="POST">
+                        <h3>Отправить сообщение</h3>
+                        <input type="text" name="name-user" placeholder="Ваше Имя"> <br>
+                        <input type="number" name="number-user" placeholder="Номер телефона"> <br>
+                        <textarea placeholder="Ваше сообщение" name="message-user"></textarea>
+                        <input type="submit" name="submit-button" class="submit-button">
+                    </form>
+                </div>
+              </div>
+
+
+              <footer>
+                  <p>Контакты</p>
+                  <ul>
+                      <li>+7(776) - 288 - 49 - 55</li>
+                      <li>huistowns@gmail.com</li>
+                  </ul>
+                  <p>© 2020  "Omirzakov"</p>
+              </footer>
 
 
 
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+        <script src="jquery-3.4.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typeit@6.1.1/dist/typeit.min.js"></script>
         <script src='main.js'></script>
 </body>
 </html>
