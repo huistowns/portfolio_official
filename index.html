@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omirzakov</title>
+    <link rel="shortcut icon" href="img/logoIcon.svg">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="style.css">
-
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
@@ -27,12 +28,12 @@
                     <li><a href="#modal-user" rel="modal:open">Обо мне</a></li>
                     <li><a href=".my-jobs">Мои работы</a></li>
                     <li><a href=".my-skills">Навыки</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#modal-user" rel="modal:open">Контакты</a></li>
                 </nav>
             </div>
             <div class="login-field">
                 <nav>
-                    <li><a href="#">Регистрация</a></li>
+                    <li><a href="#modal-reg" rel="modal:open">Регистрация</a></li>
                     <li><a href="#">Логин</a></li>
                 </nav>
             </div>
@@ -43,6 +44,7 @@
         <div class="logo">
             <a href="#">Omirzakov</a>
             <img src="img/logoIcon.svg" alt="logo">
+            <img class = "burger-icon" src="img/iconfinder_menu-alt_134216.svg" alt="">
         </div>
          <nav>
             <li><a href="#modal-user" rel="modal:open">Обо мне</a></li>
@@ -88,7 +90,7 @@
                     <img src="img/dev-icons/icons8-javascript-100.png">
                 </div>
                 <div class="cart" title="bootstrap">
-                    <img src="img/dev-icons/bootstrap-icon.png" width="120px">
+                    <img src="img/dev-icons/bootstrap_2.jpg" alt="" width="100px">
                 </div>
                 <div class="cart" title="psql">
                     <img src="img/dev-icons/icons8-sql-100.png">
@@ -96,7 +98,6 @@
                 <div class="cart" title="php">
                     <img src="img/dev-icons/icons8-php-100.png">
                 </div>
-
             </div>
         </section>
 
@@ -111,6 +112,16 @@
                       <li><a href="https://www.instagram.com/maestrobigboy/" target = "_blank" alt="instagram"><img src="img/instagram.png" alt="instagram"></a></li>
                       <li><a href="https://wa.me/77762884955"><img src="img/whatsapp.png" target = "_blank" alt=""></a></li>
                   </nav>
+          </div>
+
+          <div id="modal-reg" class="modal animated fadeInDown">
+              <h3>Регистрация</h3>
+              <form action="php/reg.php" method="GET">
+                <input type="text" name="name-user" placeholder="Имя">  <br>
+                <input type="email" name="email-user" placeholder="Почта"> <br>
+                <input type="password" name="password-user" placeholder="Пароль"> 
+                <input type="submit" class="submit-button">
+              </form>
           </div>
 
           <div class="my-jobs">
@@ -148,11 +159,21 @@
                     </div>
                   </div>                 
               </div>
+               <!-- <div class="modal-window__jobs">
+                    <h2>КиноАфиша</h2>
+                    <span>X</span>
+                    <div class="modal-windows">
+                        <div class="kinoafisha-slider">
+                            <div><img src="img/website-photos/kino-alm/1.jpg" alt="" width="500px"></div>
+                            <div><img src="img/website-photos/kino-alm/2.jpg" alt="" width="500px"></div>
+                        </div>
+                    </div>
+                </div> -->
               </div>
 
               <div class="contact-form">
                 <div class="contact-input">
-                    <form action="main.php" method="POST">
+                    <form action="php/main.php" method="POST">
                         <h3>Отправить сообщение</h3>
                         <input type="text" name="name-user" placeholder="Ваше Имя"> <br>
                         <input type="number" name="number-user" placeholder="Номер телефона"> <br>
@@ -179,6 +200,7 @@
         <script src="jquery-3.4.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/typeit@6.1.1/dist/typeit.min.js"></script>
+        <script src="slick-1.8.1/slick/slick.min.js"></script>
         <script src='main.js'></script>
 </body>
 </html>
